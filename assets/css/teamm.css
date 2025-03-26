@@ -128,7 +128,7 @@ header .logo img{
     font-weight: 500;
     line-height: 1.5;
     text-align: left;
-    margin: 0 55px 25px 55px;
+    margin: 0 125px 100px 125px;
 }
 .team-text p {
     font-size: 1.5rem;
@@ -571,6 +571,11 @@ footer p{
     text-align: center;
     color: #999;
 }
+@media (max-width:1111px){
+    .almline2{
+        margin:0 60px 100px 60px;
+    }
+}
 @media (max-width:560px){
     .h1conbox{
         font-size: 30px;
@@ -601,6 +606,9 @@ footer p{
     .jline{
         margin-top: 32px;
         margin-bottom: 20px;
+    }
+    .almline2{
+        margin:0 30px 100px 30px;
     }
 }
 @media (max-width:435px){
@@ -695,3 +703,4 @@ footer p{
         transform: translateY(-8px) rotate(-45deg);
     }
 }
+
