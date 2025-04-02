@@ -14,7 +14,7 @@ let scale = 1, // device pixel ratio
 
 let stars = [];
 let animationActive = false;
-let velocity = { x: 0, y: 0, tx: 0, ty: 0, z: 0.0005 };
+let velocity = { x: 0, y: 0, tx: 0, ty: 0, z: 0.008 };
 
 generate();
 resize();
