@@ -430,7 +430,8 @@ footer p{
 }
 .contactS{
     padding: 20px;
-    background: #fff;
+    background-color: #ffffff;
+    background-image: url("data:image/svg+xml,%3Csvg width='6' height='6' viewBox='0 0 6 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23040712' fill-opacity='0.18' fill-rule='evenodd'%3E%3Cpath d='M5 0h1L0 6V5zM6 5v1H5z'/%3E%3C/g%3E%3C/svg%3E");
     box-shadow: 0 5px 35px rgba(0,0,0,0.15);
 }
 .infu{
@@ -445,6 +446,15 @@ footer p{
     grid-template-areas: 'form info' 'form map';
     grid-gap: 20px;
 }
+.Cbox2{
+    position: relative;
+    display: grid;
+    margin-top:0.1rem;
+    margin-bottom:3.5rem;
+}
+.y24rect{
+    background-color: #111222;
+}
 .contactS h3{
     color:#111222;
     font-weight: 600;
@@ -454,6 +464,9 @@ footer p{
 }
 .infu h3{
     color: #fff;
+}
+.y24rect h3{
+    color:#fff;
 }
 .formBox{
     position: relative;
@@ -485,6 +498,7 @@ footer p{
     outline: none;
     border: 1px solid #333;
     background-color: #fff;  
+    font-family: Poppins,Open Sans,sans-serif;
 }
 .inputBox textarea{
     padding: 10px;
@@ -495,6 +509,8 @@ footer p{
     min-height: 220px;
     margin-bottom: 10px;
     background-color: #fff;
+    font-family: Poppins,Open Sans,sans-serif;
+
 }
 .inputBox input[type='submit']{
     background: #f7941d;
@@ -527,8 +543,20 @@ footer p{
     font-size: 2.15rem;
     margin-right: 10px;
 }
+.Cbox2 .infoBox .infou li span:nth-child(2){
+    font-size: 2.15rem;
+    margin-right: 40px;
+}
+.recht{
+    line-height: 3.20rem;
+    font-size:1.75rem; margin-right:40px;    color:#E8E8E8;
+}
+.recht2{
+    line-height: 3.20rem;
+    font-size:1.75rem; color:#E8E8E8;
+}
 .infoBox .infou li span{
-    color:#fff
+    color:#fff;
 }
 .infoBox .infou li a {
     color: #fff;
@@ -540,6 +568,46 @@ footer p{
 .map iframe{
     width: 100%;
     height: 100%;
+}
+#rispace1{
+    margin-right:241px;
+}
+#rispace2{
+    margin-right:40px;
+}
+#rispace3{
+    margin-right:47px;
+}
+#rispace4{
+    margin-right:245px;
+}
+#cong{
+    font-size: 2.65rem;
+    margin-top: 3rem; 
+    font-weight: 400;
+}
+#linn{
+    font-size: 2.15rem; 
+    margin-top: -0.75rem; 
+    font-weight: 400;
+}
+#rectres{
+    font-size: 3.25rem; margin-bottom: 4rem; font-weight: 450;
+}
+#sublogo1{
+    font-size: 3.7rem;
+}
+#sublogo2{
+    font-size: 3.7rem;
+}
+#sublogo3{
+    font-size: 3.7rem;
+}
+#sublogo4{
+    font-size: 3.7rem;
+}
+#smiley{
+    font-size: 2.95rem;
 }
 /*Sponsors*/
 .sponmain{
@@ -744,6 +812,264 @@ footer p{
         font-size: 16px;
     }
 }
+@media (max-width:1080px){
+    #rispace1{
+        margin-right: 150px;
+    }
+    #rispace2{
+        margin-right: -50px;
+    }
+    #rispace3{
+        margin-right: -40px;
+    }
+    #rispace4{
+        margin-right: 160px;
+    }
+    #cong{
+        font-size: 2.5rem;
+    }
+    #linn{
+        font-size: 2rem;
+    }
+}
+@media (max-width:990px){
+    #rispace1{
+        margin-right: 70px;
+    }
+    #rispace2{
+        margin-right: -135px;
+    }
+    #rispace3{
+        margin-right: -127px;
+    }
+    #rispace4{
+        margin-right: 70px;
+    }
+    #cong{
+        font-size: 2.45rem;
+        margin-bottom: 2px;
+    }
+    #linn{
+        font-size: 1.8rem;
+    }
+}
+@media (max-width:860px){
+    #rispace1{
+        margin-right: -20px;
+    }
+    #rispace2{
+        margin-right: -225px;
+    }
+    #rispace3{
+        margin-right: -217px;
+    }
+    #rispace4{
+        margin-right: -20px;
+    }
+    #cong{
+        font-size: 2.2rem;
+        margin-bottom: 10px;
+    }
+    #linn{
+        font-size: 1.6rem;
+    }
+}
+@media (max-width:768px){
+    #rispace1{
+        margin-right: -60px;
+    }
+    #rispace2{
+        margin-right: -240px;
+    }
+    #rispace3{
+        margin-right: -235px;
+    }
+    #rispace4{
+        margin-right: -60px;
+    }
+    #cong{
+        font-size: 2.15rem;
+        margin-bottom: 10px;
+    }
+    #linn{
+        font-size: 1.6rem;
+    }
+    #smiley{
+        font-size: 2.55rem;
+    }
+}
+@media (max-width:585px){
+    .ContactUS{
+        padding:9.25em 6.5em 9.25rem 6.5em;
+
+    }
+}
+@media (max-width:660px){
+    #rispace1{
+        margin-right: -73px;
+        font-size: 2rem;
+    }
+    #rispace2{
+        margin-right: -240px;
+        font-size: 2rem;
+    }
+    #rispace3{
+        margin-right: -235px;
+        font-size: 2rem;
+    }
+    #rispace4{
+        margin-right: -73px;
+        font-size: 2rem;
+    }
+    #cong{
+        font-size: 2rem;
+        margin-bottom: 10px;
+    }
+    #linn{
+        font-size: 1.55rem;
+    }
+    #rectres{
+        font-size: 3rem;
+        margin-bottom: 3rem;
+        font-weight: 450;
+    }
+    #sublogo1{
+        font-size: 3.3rem;
+    }
+    #sublogo2{
+        font-size: 3.3rem;
+    }
+    #sublogo3{
+        font-size: 3.3rem;
+    }
+    #sublogo4{
+        font-size: 3.3rem;
+    }
+    .recht{
+        font-size: 1.45rem;
+        line-height: 2.7rem;
+        margin-right: 30px;
+    }
+    .recht2{
+        font-size: 1.45rem;
+        line-height: 2.7rem;
+    }
+    #smiley{
+        font-size: 2.25rem;
+    }
+}
+@media (max-width:455px){
+    #rispace1{
+        margin-right: -78px;
+        font-size: 1.65rem;
+    }
+    #rispace2{
+        margin-right: -215px;
+        font-size: 1.65rem;
+    }
+    #rispace3{
+        margin-right: -210px;
+        font-size: 1.65rem;
+    }
+    #rispace4{
+        margin-right: -78px;
+        font-size: 1.65rem;
+    }
+    #cong{
+        font-size: 1.6rem;
+        margin-bottom: 10px;
+    }
+    #linn{
+        font-size: 1.45rem;
+    }
+    #rectres{
+        font-size: 2.35rem;
+        margin-bottom: 2.25rem;
+        font-weight: 450;
+    }
+    #sublogo1{
+        font-size: 2.75rem;
+    }
+    #sublogo2{
+        font-size: 2.75rem;
+    }
+    #sublogo3{
+        font-size: 2.75rem;
+    }
+    #sublogo4{
+        font-size: 2.75rem;
+    }
+    .recht{
+        font-size: 1.25rem;
+        line-height: 2.1rem;
+        margin-right: 25px;
+        font-weight: 450;
+    }
+    .recht2{
+        font-size: 1.25rem;
+        line-height: 2.1rem;
+        font-weight: 300;
+    }
+    #smiley{
+        font-size: 2rem;
+    }
+}
+@media (max-width:425px){
+    #rispace1{
+        margin-right: -97px;
+        font-size: 1.5rem;
+    }
+    #rispace2{
+        margin-right: -220px;
+        font-size: 1.5rem;
+    }
+    #rispace3{
+        margin-right: -215px;
+        font-size: 1.5rem;
+    }
+    #rispace4{
+        margin-right: -97px;
+        font-size: 1.5rem;
+    }
+    #cong{
+        font-size: 1.6rem;
+        margin-bottom: 10px;
+    }
+    #linn{
+        font-size: 1.45rem;
+    }
+    #rectres{
+        font-size: 2.25rem;
+        margin-bottom: 2rem;
+        font-weight: 450;
+    }
+    #sublogo1{
+        font-size: 2.5rem;
+    }
+    #sublogo2{
+        font-size: 2.5rem;
+    }
+    #sublogo3{
+        font-size: 2.5rem;
+    }
+    #sublogo4{
+        font-size: 2.5rem;
+    }
+    .recht{
+        font-size: 1.25rem;
+        line-height: 2.1rem;
+        margin-right: 25px;
+        font-weight: 450;
+    }
+    .recht2{
+        font-size: 1.25rem;
+        line-height: 2.1rem;
+        font-weight: 300;
+    }
+    #smiley{
+        font-size: 2rem;
+    }
+}
 .team-text p {
     font-size: 1.5rem;
     color: #ffffff;
@@ -930,6 +1256,10 @@ overflow: hidden;
         border-radius: 0.7rem;
       }
 }
+
+
+
+
 
 
 
