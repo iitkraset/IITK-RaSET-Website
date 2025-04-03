@@ -1,14 +1,3 @@
-ScrollReveal({
-    reset:false,
-    distance: '60px',
-    duration:2500,
-    delay:100
-    });
-
-    ScrollReveal().reveal('.form',{delay:0,origin:'left'});
-    ScrollReveal().reveal('.infu',{delay:200,origin:'right'});
-    ScrollReveal().reveal('.map',{delay:600,origin:'right'});
-    
     const hamburger = document.querySelector(".hamburg");
     const navMenu = document.querySelector(".navMenu");
     hamburger.addEventListener("click", () => {
