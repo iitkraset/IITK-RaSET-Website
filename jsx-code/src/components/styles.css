@@ -1,0 +1,413 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #0a0a0a;
+    color: #ffffff;
+    min-height: 100vh;
+    padding: 60px 20px;
+}
+
+.team-container-JTM {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 60px;
+    font-size: 2.2rem;
+    font-weight: 300;
+    letter-spacing: -0.02em;
+}
+
+.team-grid-JTM {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 60px;
+    justify-items: center;
+    margin-bottom: 60px;
+}
+
+/* The core reusable template - just a circular image with hover interactions */
+.team-member-JTM {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    cursor: pointer;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Subtle lift effect on hover to indicate interactivity */
+.team-member-JTM:hover {
+    transform: translateY(-8px);
+}
+
+.member-image-JTM {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Image darkens on hover to create backdrop for overlay content */
+.team-member-JTM:hover .member-image-JTM {
+    filter: brightness(0.3) contrast(1.2);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Overlay content that appears on hover - contains both info and social links */
+.member-overlay-JTM {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+}
+
+.team-member-JTM:hover .member-overlay-JTM {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.member-info-JTM {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.member-name-JTM {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 4px;
+    color: #ffffff;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.member-subsystem-JTM {
+    font-size: 0.85rem;
+    color: #cccccc;
+    font-weight: 300;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Social links arranged in a compact horizontal row */
+.social-links-JTM {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+
+.social-link-JTM {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 14px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(10px);
+}
+
+/* Individual social platform colors with subtle transparency */
+.github-JTM:hover {
+background: rgba(0, 128, 0, 0.9); /* GitHub green (success tone) */
+}
+.linkedin-JTM:hover {
+background: rgba(10, 102, 194, 0.9); /* LinkedIn blue */
+}
+.email-JTM:hover {
+background: rgba(219, 68, 55, 0.9); /* Gmail red */
+}
+.instagram-JTM:hover {
+background: rgba(193, 53, 132, 0.9); /* Instagram purple-pink */
+}
+
+.social-link-JTM:hover {
+    transform: scale(1.1);
+}
+
+/* Informational section explaining the template concept */
+.template-info-JTM {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 16px;
+    margin-top: 80px;
+}
+
+.template-info-JTM h2 {
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.template-info-JTM p {
+    color: #cccccc;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.code-example-JTM {
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 24px;
+    margin: 24px 0;
+    font-family: 'SF Mono', 'Monaco', 'Cascadia Code', monospace;
+    font-size: 13px;
+    overflow-x: auto;
+    color: #e8e8e8;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .team-grid-JTM {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 50px;
+    }
+    
+    .team-member-JTM {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #0a0a0a;
+    color: #ffffff;
+    min-height: 100vh;
+    padding: 60px 20px;
+}
+
+.team-container {
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 60px;
+    font-size: 2.2rem;
+    font-weight: 300;
+    letter-spacing: -0.02em;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+    gap: 40px; /* Adjusted gap */
+    justify-items: center;
+    margin-bottom: 60px;
+}
+
+.team-member {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #1c1c1c; /* Slightly lighter card background */
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    /* width: 220px; Determined by grid
+    overflow: hidden; /* Ensures overlay respects border-radius */
+}
+
+.team-member:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
+}
+
+.member-image-container {
+    width: 200px; /* Adjusted image container size */
+    height: 200px;
+    border-radius: 30%;
+    overflow: hidden;
+    margin-bottom: 20px; /* Space below image */
+    /* border: 3px solid rgba(255, 255, 255, 0.15); */
+    transition: border-color 0.3s;
+}
+
+.member-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.member-name {
+    font-size: 1.2rem; /* Adjusted name font size */
+    font-weight: 600; /* Bolder name */
+    margin-bottom: 6px;
+    color: #ffffff;
+}
+
+.member-subsystem {
+    font-size: 0.8rem; /* Adjusted subsystem font size */
+    color: #bbbbbb; /* Lighter subsystem text */
+    margin-bottom: 10px; /* Add some space if needed before overlay appears */
+}
+
+.member-overlay-social {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px; /* Match parent card's border-radius */
+    background: rgba(10, 10, 10, 0.85); /* Darker, slightly more opaque overlay */
+    backdrop-filter: blur(3px); /* Reduced blur */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+}
+
+.team-member:hover .member-overlay-social {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.social-links {
+    display: flex;
+    gap: 10px; /* Reduced space between social icons */
+    justify-content: center;
+    margin-top: 15px; /* Space below subsystem in overlay */
+}
+
+.social-link {
+    width: 36px; 
+    height: 36px;
+    border-radius: 8px; /* Squarish links */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #ffffff;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    /* backdrop-filter: blur(10px); Removed as overlay has backdrop-filter */
+}
+.social-link i {
+    font-size: 18px; /* Adjusted icon size */
+}
+
+/* Individual social platform colors with subtle transparency */
+.github:hover {
+background: rgba(0, 128, 0, 0.9); /* GitHub green (success tone) */
+}
+.linkedin:hover {
+background: rgba(10, 102, 194, 0.9); /* LinkedIn blue */
+}
+.email:hover {
+background: rgba(219, 68, 55, 0.9); /* Gmail red */
+}
+.instagram:hover {
+background: rgba(193, 53, 132, 0.9); /* Instagram purple-pink */
+}
+
+.social-link:hover {
+    transform: scale(1.1);
+}
+
+/* Informational section explaining the template concept */
+.template-info {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 16px;
+    margin-top: 80px;
+}
+
+.template-info h2 {
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.template-info p {
+    color: #cccccc;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.code-example {
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 24px;
+    margin: 24px 0;
+    font-family: 'SF Mono', 'Monaco', 'Cascadia Code', monospace;
+    font-size: 13px;
+    overflow-x: auto;
+    color: #e8e8e8;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .team-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        gap: 30px;
+    }
+    
+    .member-image-container {
+        width: 110px;
+        height: 110px;
+    }
+    .member-name {
+        font-size: 1.1rem;
+    }
+}
+.team-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  border-bottom: 2px solid #f7941d;
+  padding-bottom: 0.5rem;
+}
