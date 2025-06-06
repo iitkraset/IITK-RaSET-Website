@@ -15,16 +15,28 @@ async function fetchAndParseCsv(csvPath) {
   const data = results.data.map(row => new Map(Object.entries(row)));
     return data; // returns array of Maps
 }
+const Images_folder = '/JTM_Y24_Images'
+// const images = import.meta.glob(Images_folder, { eager: true });//eager: true loads all images at once
+const JTMimages = import.meta.glob('/src/assets/JTM_Y24_Images/*.{jpg,jpeg,png}', { eager: true });
 
-function TeamMemberJTM({ member }) {
+// console.log(images);
+function TeamMemberJTM({ member}) {
+  // console.log(JTMimages);
+  // const username = member.email.split('@')[0]; 
+  const username = member?.email?.split('@')[0] ?? '';
+
+  const MemberImage = Object.entries(JTMimages)
+  .filter(([path]) => path.includes(username.toLowerCase())) // Filter images based on username
+  .map(([, module]) => module.default);
+  console.log(member.Name, username,MemberImage);
   return (
     // Name,Roll No,GitHub,LinkedIn,email,Instagram,image
     <div className="team-member-JTM">
-      <img src={member.image} alt="person.svg" className="member-image-JTM" />
+      <img src={MemberImage} alt="person.svg" className="member-image-JTM" />
       <div className="member-overlay-JTM">
         <div className="member-info-JTM">
           <div className="member-name-JTM">{member.Name}</div>
-        </div>
+        </div>  
         <div className="social-links-JTM">
           {member.GitHub && member.GitHub.trim() !== "" && (
             <a
