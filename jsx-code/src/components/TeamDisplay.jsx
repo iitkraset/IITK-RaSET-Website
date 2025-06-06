@@ -31,7 +31,13 @@ function TeamDisplay() {
     async function loadTeamData() {
       // Load JT Members
       const jtData = await fetchAndParseCsv('/JTM Info.csv'); // The JTM Info.csv file path is in the public directory
-      setJtMembers(jtData);
+      const grouped = {};
+      for (const member of jtData) {
+        const subsystem = member.subsystem?.trim() || "Unknown";
+        if (!grouped[subsystem]) grouped[subsystem] = [];
+        grouped[subsystem].push(member);
+      }
+      setJtMembers(grouped);
       
       // Load ST Members and Heads
       const stData = await fetchAndParseCsv('/STM Info.csv');
@@ -52,15 +58,21 @@ function TeamDisplay() {
   return (
     <div className="team-container">
       {/* JT Members Section */}
-      <h2>JT Members</h2>
-      <div className="team-grid">
-        {jtMembers.map((member, index) => (
-          <TeamMemberJTM key={`jt-${index}`} member={member} />
-        ))}
-      </div>
+      <h1 className = "team-heading">Junior Team Members</h1>
+      {Object.keys(jtMembers).map((subsystem) => (
+        <div key={subsystem}>
+          <h2 className = "subsystem-heading">{subsystem} Subsystem</h2>
+          <div className="team-grid">
+            {jtMembers[subsystem].map((member, index) => (
+              <TeamMemberJTM key={`${subsystem}-${index}`} member={member} />
+            ))}
+          </div>
+        </div>
+      ))}
+
       
       {/* ST Members and Heads Section */}
-      <h2>ST Members & Heads</h2>
+      <h1 className = "team-heading">Senior Team Members & Heads</h1>
       <div className="team-grid">
         {stMembers.map((member, index) => (
           <TeamMemberJTM key={`st-${index}`} member={member} />

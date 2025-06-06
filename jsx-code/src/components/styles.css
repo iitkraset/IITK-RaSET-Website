@@ -20,7 +20,17 @@ h2 {
   justify-content: flex-start;
   margin-bottom: 3rem;
 }
-
+.team-heading{
+    margin-bottom: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+.subsystem-heading{
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+}
 /* The core reusable template - just a circular image with hover interactions */
 .team-member-JTM {
     position: relative;
