@@ -163,7 +163,7 @@ const Footer = () => {
               <div>
                 <a href="mailto:raset@iitk.ac.in">raset@iitk.ac.in</a><br />
                 <a href="mailto:iitk.raset@gmail.com">iitk.raset@gmail.com</a><br />
-                <a href="mailto:prabhusafi96277@gmail.com">prabhusafi96277@gmail.com</a>
+                {/* <a href="mailto:prabhusafi96277@gmail.com">prabhusafi96277@gmail.com</a> */}
               </div>
             </li>
           </ul>

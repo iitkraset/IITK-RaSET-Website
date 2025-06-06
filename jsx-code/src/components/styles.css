@@ -4,34 +4,19 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    background: #0a0a0a;
-    color: #ffffff;
-    min-height: 100vh;
-    padding: 60px 20px;
+
+.team-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.team-container-JTM {
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-h1 {
-    text-align: center;
-    color: #ffffff;
-    margin-bottom: 60px;
-    font-size: 2.2rem;
-    font-weight: 300;
-    letter-spacing: -0.02em;
-}
-
-.team-grid-JTM {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 60px;
-    justify-items: center;
-    margin-bottom: 60px;
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: flex-start;
+  margin-bottom: 3rem;
 }
 
 /* The core reusable template - just a circular image with hover interactions */
@@ -199,13 +184,6 @@ background: rgba(193, 53, 132, 0.9); /* Instagram purple-pink */
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    background: #0a0a0a;
-    color: #ffffff;
-    min-height: 100vh;
-    padding: 60px 20px;
-}
 
 .team-container {
     max-width: 1500px;
@@ -222,13 +200,14 @@ h1 {
 }
 
 .team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
-    gap: 40px; /* Adjusted gap */
-    justify-items: center;
-    margin-bottom: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: flex-start;
+  margin-bottom: 3rem;
 }
 
+/* Individual team member card */
 .team-member {
     position: relative;
     display: flex;
@@ -390,24 +369,4 @@ background: rgba(193, 53, 132, 0.9); /* Instagram purple-pink */
     .member-name {
         font-size: 1.1rem;
     }
-}
-.team-container {
-  padding: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 2rem;
-  margin-bottom: 3rem;
-}
-
-h2 {
-  color: #333;
-  margin-bottom: 1.5rem;
-  font-size: 1.8rem;
-  border-bottom: 2px solid #f7941d;
-  padding-bottom: 0.5rem;
 }

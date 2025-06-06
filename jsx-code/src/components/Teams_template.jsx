@@ -18,6 +18,7 @@ async function fetchAndParseCsv(csvPath) {
 
 function TeamMemberJTM({ member }) {
   return (
+    // Name,Roll No,GitHub,LinkedIn,email,Instagram,image
     <div className="team-member-JTM">
       <img src={member.image} alt="person.svg" className="member-image-JTM" />
       <div className="member-overlay-JTM">
@@ -25,9 +26,9 @@ function TeamMemberJTM({ member }) {
           <div className="member-name-JTM">{member.Name}</div>
         </div>
         <div className="social-links-JTM">
-          {member.Github && member.Github.trim() !== "" && (
+          {member.GitHub && member.GitHub.trim() !== "" && (
             <a
-              href={member.Github}
+              href={member.GitHub}
               className="social-link-JTM github-JTM"
               target="_blank"
               rel="noopener noreferrer"
@@ -36,9 +37,9 @@ function TeamMemberJTM({ member }) {
               <i className="fab fa-github" style={{ fontSize: '20px' }}></i>
             </a>
           )}
-          {member.Linkedin && member.Linkedin.trim() !== "" && (
+          {member.LinkedIn && member.LinkedIn.trim() !== "" && (
             <a
-              href={member.Linkedin}
+              href={member.LinkedIn}
               className="social-link-JTM linkedin-JTM"
               target="_blank"
               rel="noopener noreferrer"
@@ -84,9 +85,10 @@ function TeamMember({ member }) { //This function is for STMs and Heads
           <div className="member-subsystem">{member.subsystem}</div>
         </div>
         <div className="social-links">
-          {member.social.github && member.social.github.trim() !== "" && (
+          {/* Name,Roll No,GitHub,LinkedIn,email,Instagram,image */}
+          {member.GitHub && member.GitHub.trim() !== "" && (
             <a
-              href={member.social.github}
+              href={member.GitHub}
               className="social-link github"
               target="_blank"
               rel="noopener noreferrer"
@@ -95,9 +97,9 @@ function TeamMember({ member }) { //This function is for STMs and Heads
               <i className="fab fa-github" style={{ fontSize: '20px' }}></i>
             </a>
           )}
-          {member.social.linkedin && member.social.linkedin.trim() !== "" && (
+          {member.LinkedIn && member.LinkedIn.trim() !== "" && (
             <a
-              href={member.social.linkedin}
+              href={member.LinkedIn}
               className="social-link linkedin"
               target="_blank"
               rel="noopener noreferrer"
@@ -132,4 +134,5 @@ function TeamMember({ member }) { //This function is for STMs and Heads
   );
 }
 
-export default {TeamMemberJTM};
+// Export the component directly so imports resolve to a function/component
+export default TeamMemberJTM;

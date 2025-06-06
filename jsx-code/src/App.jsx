@@ -37,7 +37,8 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import './App.css';
-import TeamDisplay from'./components/TeamDisplay';
+import './components/styles.css';
+import TeamDisplay from './components/TeamDisplay';
 
 function App() {
   return (
@@ -47,7 +48,7 @@ function App() {
     //     <h1 style={{ marginTop: '100px' }}>Scroll down to see navbar effect</h1>
     //   </div>
     // </div>
-    <div> <Navbar />
+    <div className='page-wrapper'> <Navbar />
     <h1>IITK RaSET</h1>
     <TeamDisplay/>
     <Footer />

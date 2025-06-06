@@ -30,7 +30,7 @@ function TeamDisplay() {
   useEffect(() => {
     async function loadTeamData() {
       // Load JT Members
-      const jtData = await fetchAndParseCsv('raset_code\\jsx-code\\src\\components\\JTM Info.csv');
+      const jtData = await fetchAndParseCsv('/JTM Info.csv'); // The JTM Info.csv file path is in the public directory
       setJtMembers(jtData);
       
       // Load ST Members and Heads
