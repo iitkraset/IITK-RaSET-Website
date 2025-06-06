@@ -34,7 +34,7 @@ function TeamDisplay() {
       setJtMembers(jtData);
       
       // Load ST Members and Heads
-      const stData = await fetchAndParseCsv('/path/to/st-members.csv');
+      const stData = await fetchAndParseCsv('/STM Info.csv');
       setStMembers(stData);
       
       setLoading(false);
@@ -63,15 +63,7 @@ function TeamDisplay() {
       <h2>ST Members & Heads</h2>
       <div className="team-grid">
         {stMembers.map((member, index) => (
-          <TeamMemberJTM key={`st-${index}`} member={{
-            ...member,
-            social: {
-              github: member.Github,
-              linkedin: member.Linkedin,
-              email: member.Email,
-              instagram: member.Instagram
-            }
-          }} />
+          <TeamMemberJTM key={`st-${index}`} member={member} />
         ))}
       </div>
     </div>

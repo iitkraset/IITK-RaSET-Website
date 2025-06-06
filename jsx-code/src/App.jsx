@@ -49,7 +49,7 @@ function App() {
     //   </div>
     // </div>
     <div className='page-wrapper'> <Navbar />
-    <h1>IITK RaSET</h1>
+    
     <TeamDisplay/>
     <Footer />
     </div>

@@ -10,7 +10,9 @@
   max-width: 1200px;
   margin: 0 auto;
 }
-
+h2 {
+    margin-top: 20px; /* Adjust the value as needed */
+}
 .team-grid {
   display: flex;
   flex-wrap: wrap;
@@ -272,6 +274,9 @@ h1 {
     opacity: 0;
     transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     pointer-events: none;
+}
+h2{
+     padding-top: 80px;
 }
 
 .team-member:hover .member-overlay-social {
