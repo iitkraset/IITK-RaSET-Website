@@ -271,4 +271,74 @@ function TeamMemberJTM({ member}) {
 // // }
 
 // // Export the component directly so imports resolve to a function/component
+function TeamMemberSTM({ member}) {
+  // console.log(JTMimages);
+  // const username = member.email.split('@')[0]; 
+  const username = member?.email?.split('@')[0] ?? '';
+  console.log("Current member:", {
+  name: member.Name,
+  email: member.email,
+  username: member?.email?.split('@')[0] ?? ''
+});
+
+  const MemberImage = Object.entries(JTMimages)
+  .filter(([path]) => path.includes(username.toLowerCase())) // Filter images based on username
+  .map(([, module]) => module.default);
+  console.log(member.Name, username,MemberImage);
+  return (
+    // Name,Roll No,GitHub,LinkedIn,email,Instagram,image
+    <div className="team-member-JTM">
+      <img src={MemberImage} alt="person.svg" className="member-image-JTM" />
+      <div className="member-overlay-JTM">
+        <div className="member-info-JTM">
+          <div className="member-name-JTM">{member.Name}</div>
+        </div>  
+        <div className="social-links-JTM">
+          {member.GitHub && member.GitHub.trim() !== "" && (
+            <a
+              href={member.GitHub}
+              className="social-link-JTM github-JTM"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="GitHub"
+            >
+              <i className="fab fa-github" style={{ fontSize: '20px' }}></i>
+            </a>
+          )}
+          {member.LinkedIn && member.LinkedIn.trim() !== "" && (
+            <a
+              href={member.LinkedIn}
+              className="social-link-JTM linkedin-JTM"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="LinkedIn"
+            >
+              <i className="fab fa-linkedin" style={{ fontSize: '20px' }}></i>
+            </a>
+          )}
+          {member.email && member.email.trim() !== "" && (
+            <a
+              href={`mailto:${member.Email}`}
+              className="social-link-JTM email-JTM"
+              title="Email"
+            >
+              <i className="fas fa-envelope" style={{ fontSize: '20px' }}></i>
+            </a>
+          )}
+          {member.Instagram && member.Instagram.trim() !== "" && (
+            <a
+              href={member.Instagram}
+              className="social-link-JTM instagram-JTM"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Instagram"
+            >
+              <i className="fab fa-instagram" style={{ fontSize: '20px' }}></i>
+            </a>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
 export default TeamMemberJTM ;

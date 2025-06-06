@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Papa from 'papaparse';
 import  TeamMemberJTM  from './Teams_template'; // Adjust import path
 
+
 async function fetchAndParseCsv(csvPath) {
   try {
     const response = await fetch(csvPath);
@@ -41,7 +42,14 @@ function TeamDisplay() {
       
       // Load ST Members and Heads
       const stData = await fetchAndParseCsv('/STM Info.csv');
-      setStMembers(stData);
+      const grouped2 = {};
+      for (const member of stData) {
+        const subsystem = member.subsystem?.trim() || "Unknown";
+        if (!grouped2[subsystem]) grouped2[subsystem] = [];
+        grouped2[subsystem].push(member);
+      }
+      setStMembers(grouped2);
+      
       
       setLoading(false);
        console.log(jtData);
@@ -61,7 +69,7 @@ function TeamDisplay() {
       <h1 className = "team-heading">Junior Team Members</h1>
       {Object.keys(jtMembers).map((subsystem) => (
         <div key={subsystem}>
-          <h2 className = "subsystem-heading">{subsystem} Subsystem</h2>
+          <h2 className = "subsystem-heading">{subsystem}</h2>
           <div className="team-grid">
             {jtMembers[subsystem].map((member, index) => (
               <TeamMemberJTM key={`${subsystem}-${index}`} member={member} />
@@ -73,11 +81,16 @@ function TeamDisplay() {
       
       {/* ST Members and Heads Section */}
       <h1 className = "team-heading">Senior Team Members & Heads</h1>
-      <div className="team-grid">
-        {stMembers.map((member, index) => (
-          <TeamMemberJTM key={`st-${index}`} member={member} />
-        ))}
-      </div>
+      {Object.keys(stMembers).map((subsystem) => (
+        <div key={subsystem}>
+          <h2 className = "subsystem-heading">{subsystem}</h2>
+          <div className="team-grid">
+            {stMembers[subsystem].map((member, index) => (
+              <TeamMemberJTM key={`${subsystem}-${index}`} member={member} />
+            ))}
+          </div>
+        </div>
+      ))}
     </div>
   );
 }
