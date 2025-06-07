@@ -1,0 +1,141 @@
+/* Projects Page Specific Styles */
+.intro h1 {
+    font-size: 30px;
+}
+
+.intro h1 a {
+    cursor: pointer;
+    color: white;
+    transition: all 0.4s ease-out;
+    font-size: 40px;
+}
+
+.intro h1 a:hover {
+    color: #f7941d;
+}
+
+.intro h1 a {
+    position: relative;
+    font-family: Poppins, Open Sans, sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.intro h1 a:before {
+    content: '';
+    position: absolute;
+    bottom: -7px;
+    left: 7%;
+    width: 125px;
+    height: 3px;
+    background: #f7941d;
+    text-decoration: none;
+}
+
+.wrapper {
+    font-family: Poppins, Open Sans, sans-serif;
+    color: #fff;
+}
+
+section {
+    margin-bottom: 150px;
+    margin-top: 150px;
+}
+
+.profile img {
+    width: 525px;
+    object-fit: cover;
+    vertical-align: middle;
+}
+
+.wrapper {
+    padding: 25px 95px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 8rem;
+}
+
+.intro {
+    flex: 1;
+}
+
+p {
+    line-height: 1.65;
+}
+
+.specify {
+    font-weight: 500;
+    color: #f7941d;
+}
+
+/* Responsive Styles */
+@media (max-width: 721px) {
+    .wrapper {
+        padding: 25px 75px;
+        gap: 4rem;
+    }
+    
+    p {
+        line-height: 1.5;
+    }
+    
+    .profile img {
+        width: 100%;
+        max-width: 400px;
+        object-fit: cover;
+        vertical-align: middle;
+    }
+}
+
+@media (max-width: 555px) {
+    .wrapper {
+        padding: 25px 55px;
+        gap: 4rem;
+    }
+    
+    p {
+        line-height: 1.5;
+    }
+    
+    .profile img {
+        width: 100%;
+        max-width: 300px;
+        object-fit: cover;
+        vertical-align: middle;
+    }
+    
+    .intro h1 a {
+        font-size: 3.25rem;
+        line-height: 4.25rem;
+    }
+}
+
+@media (max-width: 435px) {
+    section {
+        margin-top: 100px;
+        margin-bottom: 115px;
+    }
+    
+    .wrapper {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 380px) {
+    .wrapper {
+        padding: 25px 45px;
+    }
+    
+    p {
+        line-height: 1.5;
+    }
+    
+    .profile img {
+        width: 100%;
+        max-width: 250px;
+        object-fit: cover;
+        vertical-align: middle;
+    }
+}

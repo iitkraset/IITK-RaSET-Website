@@ -1,5 +1,5 @@
-/* Makes footer stick to bottom and full width */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
 .site-footer {
   width: 100vw;
   background-color: #040712;
@@ -7,9 +7,6 @@
   color: white;
   padding: 50px 0 15px;
   font-family: 'Poppins', sans-serif;
-  /* position: relative; */
-  /* position: fixed;/ */
-   font-family: Poppins, sans-serif;
 }
 
 /* Main container */
@@ -20,7 +17,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-   font-family: Poppins, sans-serif;
+  font-family: Poppins, sans-serif;
   gap: 30px;
 }
 
@@ -32,9 +29,10 @@
 }
 
 .footer-section h2 {
-  font-size: 1.5rem;
+  font-size: 2.5rem; /* Increased from 1.5rem */
   margin-bottom: 20px;
   position: relative;
+  margin-top:-50px;
 }
 
 .footer-section h2::after {
@@ -51,6 +49,7 @@
   color: #999;
   line-height: 1.75;
   margin-bottom: 20px;
+  font-size: 1.8rem; /* Added font size */
 }
 
 .social-links {
@@ -88,6 +87,7 @@
   color: #999;
   text-decoration: none;
   transition: color 0.3s;
+  font-size: 1.8rem; /* Increased font size */
 }
 
 .footer-section ul li a:hover {
@@ -110,13 +110,14 @@
 .contact-info span, 
 .contact-info div {
   color: #999;
-  font-size: 14px;
-  line-height: 1.5;
+  font-size: 1.1rem; /* Increased from 14px */
+  line-height: 3rem;
 }
 
 .contact-info a {
   color: #999;
   text-decoration: none;
+  font-size: 3rem; /* Added font size */
 }
 
 .contact-info a:hover {
@@ -128,6 +129,7 @@
   padding: 35px 0 3px;
   color: #999;
   width: 100%;
+  font-size: 2rem; /* Increased font size */
 }
 
 @media (max-width: 768px) {
@@ -140,8 +142,22 @@
     margin-bottom: 40px;
   }
 }
-
-/* Add this to your main CSS file */
-body {
-  padding-bottom: 300px; /* Adjust based on your footer height */
+/* Add this specific rule to target just the contact info text */
+.site-footer .contact-info span,
+.site-footer .contact-info div,
+.site-footer .contact-info a {
+  font-size: 1.8rem; /* Increased from previous size */
+  line-height: 1.5; /* Maintain line height for better readability */
 }
+
+/* Keep all other existing footer styles the same */
+.site-footer {
+  width: 100vw;
+  background-color: #040712;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%2341607b' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+  color: white;
+  padding: 50px 0 15px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ... rest of your existing footer CSS ... */

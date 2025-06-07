@@ -26,11 +26,11 @@ const Navbar = () => {
 
         {/* Navigation links */}
         <ul className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
-          <li><a href="#home" className="nav-link active">Home</a></li>
-          <li><a href="#projects" className="nav-link">Projects</a></li>
-          <li><a href="#sponsors" className="nav-link">Sponsorships</a></li>
-          <li><a href="#team" className="nav-link">Team</a></li>
-          <li><a href="#contact" className="nav-link">Contact us</a></li>
+          <li><a href="/" className="nav-link">Home</a></li>
+          <li><a href="/projects" className="nav-link">Projects</a></li>
+          <li><a href="/sponsors" className="nav-link">Sponsorships</a></li>
+          <li><a href="/team" className="nav-link">Team</a></li>
+          <li><a href="/contacts" className="nav-link">Contact us</a></li>
         </ul>
 
         {/* Hamburger menu */}

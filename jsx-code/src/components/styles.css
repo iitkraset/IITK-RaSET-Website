@@ -394,3 +394,39 @@ background: rgba(193, 53, 132, 0.9); /* Instagram purple-pink */
         font-size: 1.1rem;
     }
 }
+/* Add these rules to your existing CSS */
+.team-member:hover .member-name {
+  font-size: 1.4rem; /* Increased from 1.2rem */
+}
+
+.team-member:hover .member-subsystem {
+  font-size: 1rem; /* Increased from 0.8rem */
+}
+
+/* For the JTM version */
+.team-member-JTM:hover .member-name-JTM {
+  font-size: 1.3rem; /* Increased from 1.1rem */
+}
+
+.team-member-JTM:hover .member-subsystem-JTM {
+  font-size: 0.95rem; /* Increased from 0.85rem */
+}
+
+/* Mobile adjustments to maintain proportions */
+@media (max-width: 768px) {
+  .team-member:hover .member-name {
+    font-size: 1.2rem; /* Slightly larger than original 1rem */
+  }
+  
+  .team-member:hover .member-subsystem {
+    font-size: 0.9rem; /* Slightly larger than original 0.8rem */
+  }
+  
+  .team-member-JTM:hover .member-name-JTM {
+    font-size: 1.15rem;
+  }
+  
+  .team-member-JTM:hover .member-subsystem-JTM {
+    font-size: 0.85rem;
+  }
+}

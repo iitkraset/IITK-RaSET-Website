@@ -1,0 +1,306 @@
+/* Contact Page Styles */
+.ContactUS {
+  padding: 6.15em 7em;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+
+.main-title {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.Cbox2 {
+  margin-bottom: 3rem;
+}
+
+.y24rect {
+  background: rgba(39, 94, 136, 0.5);
+  padding: 2rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+#rectres {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: #f7941d;
+  text-align: center;
+}
+
+.infoBox {
+  margin-top: 1.5rem;
+}
+
+.infou {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+}
+
+.infou li {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+#sublogo1, #sublogo2, #sublogo3, #sublogo4 {
+  font-size: 2rem;
+  margin-right: 0.5rem;
+}
+
+#rispace1, #rispace2, #rispace3, #rispace4 {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+/* Modified to show names and roll numbers inline */
+.recht {
+  display: inline-block;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  width: 60%; /* Adjust as needed */
+}
+
+.recht2 {
+  display: inline-block;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  width: 30%; /* Adjust as needed */
+  text-align: right;
+  vertical-align: top;
+}
+
+#cong, #linn {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+#smiley {
+  color: #f7941d;
+}
+
+/* Contact Form Section */
+.Cbox {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-gap: 2rem;
+  margin-top: 3rem;
+}
+
+.contactS {
+  background: rgba(39, 94, 136, 0.5);
+  border-radius: 10px;
+  padding: 2rem;
+}
+
+.contactS h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #f7941d;
+}
+
+.formBox {
+  width: 100%;
+}
+
+.row50 {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.row100 {
+  margin-bottom: 1rem;
+}
+
+.inputBox {
+  width: 100%;
+}
+
+.inputBox span {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.inputBox input,
+.inputBox textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.9);
+  font-family: 'Poppins', sans-serif;
+}
+
+.inputBox textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+.inputBox input[type="submit"] {
+  background: #f7941d;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.inputBox input[type="submit"]:hover {
+  background: #e07e0c;
+}
+
+/* Map Styles */
+.map {
+  height: 100%;
+}
+
+.map iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+/* Responsive Styles */
+@media (max-width: 991px) {
+  body {
+    background: #275e88;
+  }
+  
+  .Cbox {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "form" "info" "map";
+  }
+  
+  .map {
+    min-height: 300px;
+  }
+  
+  .formBox .row50 {
+    display: flex;
+    gap: 0;
+    flex-direction: column;
+  }
+  
+  .inputBox {
+    width: 100%;
+  }
+  
+  .contactS {
+    padding: 30px;
+  }
+  
+  .map {
+    min-height: 300px;
+    padding: 0;
+  }
+
+  /* Stack names and roll numbers on mobile */
+  .recht, .recht2 {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+@media (max-width: 460px) {
+  .ContactUS {
+    padding: 6.15em 5em;
+  }
+}
+
+@media (max-width: 370px) {
+  .ContactUS {
+    padding: 6.15em 1em;
+  }
+  
+  .infou {
+    grid-template-columns: 1fr;
+  }
+}
+/* Recruitment Results Section */
+.y24rect {
+  background: rgba(39, 94, 136, 0.5);
+  padding: 2rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+
+.infoBox {
+  margin-top: 1.5rem;
+}
+
+.infou {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+}
+
+.infou li {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+/* Icon styling for each subsystem */
+#sublogo1, #sublogo2, #sublogo3, #sublogo4 {
+  font-size: 2rem;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+}
+
+/* Subsystem title styling */
+#rispace1, #rispace2, #rispace3, #rispace4 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  vertical-align: middle;
+}
+
+/* Name and Roll number container */
+.name-roll-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+/* Name styling */
+.name {
+  font-size: 1.1rem;
+  text-align: left;
+  flex: 2;
+  padding-right: 1rem;
+}
+
+/* Roll number styling */
+.roll {
+  font-size: 1.1rem;
+  text-align: right;
+  flex: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .infou {
+    grid-template-columns: 1fr;
+  }
+  
+  .name-roll-container {
+    flex-direction: column;
+  }
+  
+  .name, .roll {
+    text-align: left;
+    width: 100%;
+  }
+  
+  .roll {
+    margin-top: 0.5rem;
+    font-style: italic;
+  }
+}
