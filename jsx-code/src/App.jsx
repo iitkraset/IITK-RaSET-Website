@@ -89,7 +89,7 @@ const App = () => {
        <Route path="/sponsors" element={<Sponsorships />} />
        <Route path="/projects" element={<Projects />} />
        <Route path="/team" element={<Team />} />
-       <Route path="/contacts" element={<ContactPage />} />
+       <Route path="/contact" element={<ContactPage />} />
       </Routes>
     </BrowserRouter>
   );

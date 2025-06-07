@@ -1,11 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Navbar from './Navbar'; // Adjust path as needed
 import Footer from './Footer'; // Adjust path as needed
 import { FaFireFlameCurved, FaPlaneDeparture, FaMicrochip, FaParachuteBox, FaLocationDot, FaEnvelope } from 'react-icons/fa6';
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube, FaDiscord } from 'react-icons/fa';
 import './Contact.css'
+import ScrollReveal from 'scrollreveal';
 
 const ContactPage = () => {
+  useEffect(() => {
+    const sr = ScrollReveal({ reset: false, distance: '60px', duration: 2500, delay: 400 });
+    sr.reveal('.contact-page .y24rect', { origin: 'bottom', delay: 200 });
+    sr.reveal('.contact-page .infou li', { origin: 'bottom', interval: 150 });
+    sr.reveal('.contact-page .form', { origin: 'left', delay: 300 });
+    sr.reveal('.contact-page .infu', { origin: 'right', delay: 300 });
+    sr.reveal('.contact-page .map', { origin: 'bottom', delay: 400 });
+  }, []);
+
   return (
     <div className="contact-page">
       <Navbar activeLink="contact" />

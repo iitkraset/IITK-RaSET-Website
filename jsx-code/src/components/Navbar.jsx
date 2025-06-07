@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { NavLink } from 'react-router-dom';
 import './Navbar.css';
 import logo from '../logo.png'; // If logo.png is in src folder and Navbar.jsx is in src/components
 
@@ -19,18 +20,28 @@ const Navbar = () => {
       <nav className="navbar">
         {/* Logo on the left */}
         <div className="logo-container">
-          <a href="#home">
+          <NavLink to="/">
             <img src={logo} alt="IITK RaSET Logo" className="logo-img" />
-          </a>
+          </NavLink>
         </div>
 
         {/* Navigation links */}
         <ul className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
-          <li><a href="/" className="nav-link">Home</a></li>
-          <li><a href="/projects" className="nav-link">Projects</a></li>
-          <li><a href="/sponsors" className="nav-link">Sponsorships</a></li>
-          <li><a href="/team" className="nav-link">Team</a></li>
-          <li><a href="/contacts" className="nav-link">Contact us</a></li>
+          <li>
+            <NavLink to="/" className={({ isActive }) => `nav-link${isActive ? ' active' : ''}`}>Home</NavLink>
+          </li>
+          <li>
+            <NavLink to="/projects" className={({ isActive }) => `nav-link${isActive ? ' active' : ''}`}>Projects</NavLink>
+          </li>
+          <li>
+            <NavLink to="/sponsors" className={({ isActive }) => `nav-link${isActive ? ' active' : ''}`}>Sponsorships</NavLink>
+          </li>
+          <li>
+            <NavLink to="/team" className={({ isActive }) => `nav-link${isActive ? ' active' : ''}`}>Team</NavLink>
+          </li>
+          <li>
+            <NavLink to="/contact" className={({ isActive }) => `nav-link${isActive ? ' active' : ''}`}>Contact us</NavLink>
+          </li>
         </ul>
 
         {/* Hamburger menu */}

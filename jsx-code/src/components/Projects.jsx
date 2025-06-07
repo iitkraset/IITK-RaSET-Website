@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import './Projects.css'
+import ScrollReveal from 'scrollreveal';
 
 const Projects = () => {
+  useEffect(() => {
+    const sr = ScrollReveal({ reset: false, distance: '60px', duration: 2500, delay: 400 });
+    sr.reveal('.projects-page .wrapper', { origin: 'bottom', interval: 200 });
+  }, []);
+
   return (
     <div className="projects-page">
       <Navbar activeLink="Projects" />

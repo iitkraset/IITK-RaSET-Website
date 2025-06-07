@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Papa from 'papaparse';
-// import  {TeamMemberJTM,TeamMember} from './Teams_template'; // Assuming TeamMemberJTM and TeamMemberSTM are exported from Teams_template.jsx
+import ScrollReveal from 'scrollreveal';
 import TeamMemberJTM, { TeamMember } from './Teams_template';
 async function fetchAndParseCsv(csvPath) {
   try {
@@ -66,7 +66,24 @@ function TeamDisplay() {
   //   return <div>Loading team members...</div>;
   // }
 
+  // ScrollReveal for team sections
+  useEffect(() => {
+    const sr = ScrollReveal({ reset: false, distance: '60px', duration: 2000, delay: 200 });
+    sr.reveal('.team-heading', { origin: 'top' });
+    sr.reveal('.team-grid', { origin: 'bottom', interval: 150 });
+    sr.reveal('.subsystem-heading', { origin: 'left', delay: 300 });
+    sr.reveal('.team-member', { origin: 'bottom', delay: 100 });
+    sr.reveal('.team-member-JTM', { origin: 'bottom', delay: 100 });
+  }, []);
+
   return (
+    <>
+    <div className="conbox">
+			<h1 className="h1conbox">
+        Meet Our <span className="Th1" style={{ color: '#f7941d' }}>Team</span>
+      </h1>
+		</div>
+    
     <div className="team-container">
       { /* Heads*/ }
       <h1 className = "team-heading">HEADS</h1>
@@ -99,6 +116,7 @@ function TeamDisplay() {
 
       
     </div>
+    </>
   );
 }
 

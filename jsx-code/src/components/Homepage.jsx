@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { 
   faFireFlameCurved, 
@@ -10,15 +10,139 @@ import './Homepage.css'
 import './Footer.css'
 import Navbar from './Navbar';
 import Footer from './Footer';
+import ScrollReveal from 'scrollreveal';
 
 const HomePage = () => {
+  // ref for the canvas
+  const canvasRef = useRef(null);
+
+  useEffect(() => {
+    const STAR_COLOR = '#fff';
+    const STAR_SIZE = 3;
+    const STAR_MIN_SCALE = 0.2;
+    const OVERFLOW_THRESHOLD = 50;
+    const STAR_COUNT = (window.innerWidth + window.innerHeight) / 8;
+
+    let scale = 1;
+    let width, height;
+    let stars = [];
+    let animationActive = false;
+    let velocity = { x: 0, y: 0, tx: 0, ty: 0, z: 0.008 };
+    let pointerY = window.scrollY;
+
+    const canvas = canvasRef.current;
+    const ctx = canvas.getContext('2d');
+
+    // generate stars
+    function generate() {
+      for (let i = 0; i < STAR_COUNT; i++) {
+        stars.push({ x: 0, y: 0, z: STAR_MIN_SCALE + Math.random() * (1 - STAR_MIN_SCALE) });
+      }
+    }
+    // place star randomly
+    function placeStar(star) {
+      star.x = Math.random() * width;
+      star.y = Math.random() * height;
+    }
+    // recycle star when out of bounds
+    function recycleStar(star) {
+      // ...simplified reuse of placeStar to reset
+      star.z = STAR_MIN_SCALE + Math.random() * (1 - STAR_MIN_SCALE);
+      placeStar(star);
+    }
+    // resize handler
+    function resize() {
+      scale = window.devicePixelRatio || 1;
+      const section = document.getElementById('animation-section');
+      width = section.clientWidth * scale;
+      height = section.clientHeight * scale;
+      canvas.width = width;
+      canvas.height = height;
+      stars.forEach(placeStar);
+    }
+    // update star positions
+    function update() {
+      velocity.tx *= 0.96;
+      velocity.ty *= 0.96;
+      velocity.x += (velocity.tx - velocity.x) * 0.8;
+      velocity.y += (velocity.ty - velocity.y) * 0.8;
+      stars.forEach(s => {
+        s.x += velocity.x * s.z;
+        s.y += velocity.y * s.z;
+        s.x += (s.x - width/2) * velocity.z * s.z;
+        s.y += (s.y - height/2) * velocity.z * s.z;
+        s.z += velocity.z;
+        if (s.x < -OVERFLOW_THRESHOLD || s.x > width + OVERFLOW_THRESHOLD || s.y < -OVERFLOW_THRESHOLD || s.y > height + OVERFLOW_THRESHOLD) {
+          recycleStar(s);
+        }
+      });
+    }
+    // render stars
+    function render() {
+      stars.forEach(s => {
+        ctx.beginPath();
+        ctx.lineCap = 'round';
+        ctx.lineWidth = STAR_SIZE * s.z * scale;
+        ctx.globalAlpha = 0.5 + 0.5 * Math.random();
+        ctx.strokeStyle = STAR_COLOR;
+        ctx.moveTo(s.x, s.y);
+        let tailX = Math.abs(velocity.x) < 0.1 ? 0.5 : velocity.x * 2;
+        let tailY = Math.abs(velocity.y) < 0.1 ? 0.5 : velocity.y * 2;
+        ctx.lineTo(s.x + tailX, s.y + tailY);
+        ctx.stroke();
+      });
+    }
+    // main animation loop
+    function step() {
+      if (!animationActive) return;
+      ctx.clearRect(0, 0, width, height);
+      update();
+      render();
+      requestAnimationFrame(step);
+    }
+    // scroll handler
+    function onScroll() {
+      if (!animationActive) return;
+      const scrollY = window.scrollY;
+      velocity.ty = (scrollY - pointerY) * 0.1;
+      pointerY = scrollY;
+    }
+    // IntersectionObserver to start/stop
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        animationActive = entry.isIntersecting;
+        if (animationActive) step();
+      });
+    });
+    observer.observe(document.getElementById('animation-section'));
+    // wire up events
+    window.addEventListener('resize', resize);
+    window.addEventListener('scroll', onScroll);
+    // kick off
+    generate();
+    resize();
+    
+    // ScrollReveal animations for homepage sections
+    const sr = ScrollReveal({ reset: false, distance: '60px', duration: 2500, delay: 400 });
+    sr.reveal('.abt', { delay: 400, origin: 'bottom' });
+    sr.reveal('.subsystems .card-container', { delay: 300, origin: 'bottom' });
+    sr.reveal('.Gallery .gall-article', { delay: 200, origin: 'bottom', interval: 100 });
+    
+    // cleanup
+    return () => {
+      window.removeEventListener('resize', resize);
+      window.removeEventListener('scroll', onScroll);
+      observer.disconnect();
+    };
+  }, []);
+
   return (
        
     <div  className="projects-page">
       {/* Hero Section */}
       <section>
         <div id="animation-section">
-          <canvas></canvas>
+          <canvas ref={canvasRef}></canvas>
         </div>
         <div className="main-text">
           <h1 className="WEtext" style={{fontWeight: 650}}>IITK RaSET</h1>
