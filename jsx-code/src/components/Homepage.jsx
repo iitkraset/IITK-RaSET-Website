@@ -155,7 +155,13 @@ const HomePage = () => {
       {/* About Us Section */}
       <section className="abut" id="aboutus">
         <h1 id="main-title">About us</h1>
-        <div className="row">
+        <div className="row" style={{ 
+    display: 'flex', 
+    justifyContent: 'center', 
+    alignItems: 'center', 
+    gap: '3rem', 
+    flexWrap: 'wrap' 
+  }}>
           <div className="image">
             <img src="images/imggg2.jpg" alt="Team working on rocket" />
           </div>

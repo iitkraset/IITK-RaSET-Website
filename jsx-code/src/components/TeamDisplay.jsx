@@ -82,18 +82,21 @@ function TeamDisplay() {
 			<h1 className="h1conbox">
         Meet Our <span className="Th1" style={{ color: '#f7941d' }}>Team</span>
       </h1>
+      <div class="teamimg">
+        <img src = "/Team.jpg" alt = "Team image" className='team-photo'/>
+      </div>
 		</div>
     
     <div className="team-container">
       { /* Heads*/ }
-      <h1 className = "team-heading">HEADS</h1>
+      <h1 className = "team-heading">TEAM HEADS</h1>
       <div className="team-grid">
         {Heads.map((member, index) => (
           <TeamMember key={`${member.Name}-${index}`} member={member} />
         ))}
       </div>
         { /* ST Members*/ }
-      <h1 className = "team-heading">Senior Team Members</h1>
+      <h1 className = "team-heading">SENIOR TEAM MEMBERS</h1>
       <div className="team-grid">
         {stMembers.map((member, index) => (
           <TeamMember key={`${member.Name}-${index}`} member={member} />
@@ -102,7 +105,7 @@ function TeamDisplay() {
       
 
       {/* JT Members Section */}
-      <h1 className = "team-heading">Junior Team Members</h1>
+      <h1 className = "team-heading">JUNIOR TEAM MEMBERS</h1>
       {Object.keys(jtMembers).map((subsystem) => (
         <div key={subsystem}>
           <h2 className = "subsystem-heading">{subsystem}</h2>
