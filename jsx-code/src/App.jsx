@@ -83,7 +83,7 @@ const Homeset = () => {
 
 const App = () => {
   return (
-    <BrowserRouter basename="/IITK-RaSET-Website">
+    <BrowserRouter basename="">
       <Routes>
       <Route path="/" element={<Homeset />} />
        <Route path="/sponsors" element={<Sponsorships />} />
