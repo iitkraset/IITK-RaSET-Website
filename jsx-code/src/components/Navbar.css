@@ -105,7 +105,7 @@
   }
 
   .hamburger {
-    display: flex;
+    display: flow-root;
   }
 
   .hamburger.active .bar:nth-child(1) {

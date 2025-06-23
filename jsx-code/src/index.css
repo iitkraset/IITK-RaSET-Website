@@ -24,10 +24,9 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
+  width: 100%;
   min-height: 100vh;
+  /* removed flex centering and fixed min-width to allow responsive layouts */
 }
 
 h1 {
@@ -65,4 +64,15 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+/* ensure root container spans full width */
+#root {
+  width: 100%;
+}
+
+/* Align first section under fixed navbar */
+section:first-of-type {
+  margin-top: 0;
+  padding-top: 80px; /* height of .navbar-header */
 }

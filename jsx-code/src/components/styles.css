@@ -113,17 +113,17 @@ h2 {
 }
 
 .member-name-JTM {
-    font-size: 1.1rem;
-    font-weight: 500;
+    font-size: 1.3rem;
+    font-weight: 700;
     margin-bottom: 4px;
     color: #ffffff;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
 }
 
 .member-subsystem-JTM {
-    font-size: 0.85rem;
-    color: #cccccc;
-    font-weight: 300;
+    font-size: 1rem;
+    color: #f7941d;
+    font-weight: 500;
     text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
 }
 
@@ -287,15 +287,15 @@ h1 {
 }
 
 .member-name {
-    font-size: 1.2rem; /* Adjusted name font size */
-    font-weight: 600; /* Bolder name */
+    font-size: 2.2rem; /* Increased name font size */
+    font-weight: 700; /* Bold name */
     margin-bottom: 6px;
     color: #ffffff;
 }
 
 .member-subsystem {
-    font-size: 0.8rem; /* Adjusted subsystem font size */
-    color: #bbbbbb; /* Lighter subsystem text */
+    font-size: 1.5rem; /* Increased subsystem font size */
+    color: #f7941d; /* Orange subsystem text */
     margin-bottom: 10px; /* Add some space if needed before overlay appears */
 }
 

@@ -312,6 +312,13 @@ body {
     }
 }
 
+/* Hero canvas fills container responsively */
+#animation-section canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
     .main-text h1 {
@@ -344,6 +351,13 @@ body {
         justify-content: center;
         padding: 10px;
         margin: 0;
+    }
+
+    /* ensure about image scales on mobile */
+    .abut .row .image img {
+        width: 100%;
+        max-width: 90vw;
+        height: auto;
     }
 
     .abut .row .content {
