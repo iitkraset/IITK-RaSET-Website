@@ -88,6 +88,7 @@
   grid-template-columns: 2fr 1fr 1fr;
   grid-gap: 2rem;
   margin-top: 3rem;
+  /* color:black; */
 }
 
 .contactS {
@@ -118,6 +119,7 @@
 
 .inputBox {
   width: 100%;
+  color:black;
 }
 
 .inputBox span {
@@ -133,6 +135,7 @@
   border: none;
   border-radius: 5px;
   background: rgba(255, 255, 255, 0.9);
+  color:black;
   font-family: 'Poppins', sans-serif;
 }
 

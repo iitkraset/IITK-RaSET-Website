@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import Papa from 'papaparse';
-import ScrollReveal from 'scrollreveal';
+// import ScrollReveal from 'scrollreveal';
 import TeamMemberJTM, { TeamMember } from './Teams_template';
+
 async function fetchAndParseCsv(csvPath) {
   try {
     const response = await fetch(csvPath);
@@ -76,6 +77,67 @@ function TeamDisplay() {
     sr.reveal('.team-member-JTM', { origin: 'bottom', delay: 100 });
   }, []);
 
+
+  function FacultyAdvisor({ member }) {
+  return (
+    <div className="team-member">
+      <div className="member-image-container">
+        <img src={member.image} alt={member.name} className="member-image" />
+      </div>
+      <div className="member-info">
+        <h3 className="member-name">{member.name}</h3>
+        <p className="member-subsystem">{member.department}, {member.institution}</p>
+        <div className="social-links-JTM">
+          {member.website && (
+            <a href={member.website} className="social-link-JTM website-JTM" target="_blank" rel="noopener noreferrer">
+              <i className="fas fa-globe"></i>
+            </a>
+          )}
+        </div>
+      </div>
+      <div className="member-overlay-social">
+        <div className="member-info-JTM">
+          <div className="member-name-JTM">{member.name}</div>
+          <div className="member-subsystem-JTM">{member.department}</div>
+        </div>
+        <div className="social-links-JTM">
+          {member.website && (
+            <a href={member.website} className="social-link-JTM website-JTM" target="_blank" rel="noopener noreferrer">
+              <i className="fas fa-globe"></i>
+            </a>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// Then use it with data:
+const facultyData = [
+  {
+    name: "Dr. Abhijit Kushari",
+    department: "Aerospace Engineering",
+    institution: "IIT Kanpur",
+    image: "src/assets/akushari.jpg",
+    website: "https://home.iitk.ac.in/~akushari/"
+  },
+  // ... other faculty members
+ {
+    name: "Dr. Rajesh Kitey",
+    department: "Aerospace Engineering",
+    institution: "IIT Kanpur",
+    image: "src/assets/Rkitey.jpg",
+    website: "https://home.iitk.ac.in/~kitey/"
+  },
+  {
+    name: "Dr. Tushar Sikroria",
+    department: "Mechanical Engineering",
+    institution: "IIT Kanpur",
+    image: "src/assets/tsukoriya.avif",
+    website: "https://tsikroria0.wixsite.com/trisep"
+  }, 
+];
+
   return (
     <>
     <div className="conbox">
@@ -89,12 +151,20 @@ function TeamDisplay() {
     
     <div className="team-container">
       { /* Heads*/ }
-      <h1 className = "team-heading">TEAM HEADS</h1>
+      <h1 className = "team-heading">FACULTY ADVISORS</h1>
+      <div className="team-grid">
+  {facultyData.map((member, index) => (
+    <FacultyAdvisor key={index} member={member} />
+  ))}
+</div>
+
+       <h1 className = "team-heading">TEAM HEADS</h1>
       <div className="team-grid">
         {Heads.map((member, index) => (
           <TeamMember key={`${member.Name}-${index}`} member={member} />
         ))}
       </div>
+
         { /* ST Members*/ }
       <h1 className = "team-heading">SENIOR TEAM MEMBERS</h1>
       <div className="team-grid">

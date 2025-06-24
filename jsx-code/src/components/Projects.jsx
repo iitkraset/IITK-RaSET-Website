@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import './Projects.css'
-import ScrollReveal from 'scrollreveal';
+// import ScrollReveal from 'scrollreveal';
 
 const Projects = () => {
   useEffect(() => {

@@ -143,9 +143,10 @@ function TeamMember({ member }) { //This function is for STMs and Heads
               <i className="fas fa-envelope" style={{ fontSize: '20px' }}></i>
             </a>
           )}
-          {member.instagram && member.instagram.trim() !== "" && (
+          {member.Instagram && member.Instagram.trim() !== "" && (
             <a
-              href={member.instagram}
+              // href='${https://www.instagram.com/member.Instagram}'
+              href={`https://www.instagram.com/${member.Instagram.replace('@', '')}`}
               className="social-link instagram"
               target="_blank"
               rel="noopener noreferrer"
@@ -154,6 +155,7 @@ function TeamMember({ member }) { //This function is for STMs and Heads
               <i className="fab fa-instagram" style={{ fontSize: '20px' }}></i>
             </a>
           )}
+
         </div>
       </div>
     </div>
