@@ -144,7 +144,7 @@ const facultyData = [
 			<h1 className="h1conbox">
         Meet Our <span className="Th1" style={{ color: '#f7941d' }}>Team</span>
       </h1>
-      <div class="teamimg">
+      <div className="teamimg">
         <img src = "/Team.jpg" alt = "Team image" className='team-photo'/>
       </div>
 		</div>
