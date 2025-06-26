@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+.site-footer {
+  width: 100vw;
+  background-color: #040712;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%2341607b' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+  color: white;
+  padding: 50px 0 15px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Main container */
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-family: Poppins, sans-serif;
+  gap: 30px;
+}
+
+/* Footer sections */
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+  margin-bottom: 30px;
+}
+
+.footer-section h2 {
+  font-size: 2.5rem; /* Increased from 1.5rem */
+  margin-bottom: 20px;
+  position: relative;
+  margin-top:-50px;
+}
+
+.footer-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background: #f7941d;
+}
+
+.footer-section p {
+  color: #999;
+  line-height: 1.75;
+  margin-bottom: 20px;
+  font-size: 1.8rem; /* Added font size */
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-links a {
+  color: white;
+  background: #222;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+}
+
+.social-links a:hover {
+  background: #f7941d;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #999;
+  text-decoration: none;
+  transition: color 0.3s;
+  font-size: 1.8rem; /* Increased font size */
+}
+
+.footer-section ul li a:hover {
+  color: #f7941d;
+}
+
+.contact-info li {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+  align-items: flex-start;
+}
+
+.contact-info svg {
+  color: white;
+  font-size: 20px;
+  margin-top: 3px;
+}
+
+.contact-info span, 
+.contact-info div {
+  color: #999;
+  font-size: 1.1rem; /* Increased from 14px */
+  line-height: 3rem;
+}
+
+.contact-info a {
+  color: #999;
+  text-decoration: none;
+  font-size: 3rem; /* Added font size */
+}
+
+.contact-info a:hover {
+  color: #f7941d;
+}
+
+.copyright {
+  text-align: center;
+  padding: 35px 0 3px;
+  color: #999;
+  width: 100%;
+  font-size: 2rem; /* Increased font size */
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+  }
+  
+  .footer-section {
+    margin-right: 0;
+    margin-bottom: 40px;
+  }
+}
+/* Add this specific rule to target just the contact info text */
+.site-footer .contact-info span,
+.site-footer .contact-info div,
+.site-footer .contact-info a {
+  font-size: 1.8rem; /* Increased from previous size */
+  line-height: 1.5; /* Maintain line height for better readability */
+}
+
+/* Keep all other existing footer styles the same */
+.site-footer {
+  width: 100vw;
+  background-color: #040712;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%2341607b' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+  color: white;
+  padding: 50px 0 15px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ... rest of your existing footer CSS ... */

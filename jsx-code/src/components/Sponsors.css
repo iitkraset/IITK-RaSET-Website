@@ -1,0 +1,125 @@
+/* Sponsors Page Specific Styles */
+.sponmain {
+    position: relative;
+    font-size: 4rem;
+    color: white;
+    margin-top: 12rem;
+    padding: 0rem 2rem 0.15rem 2rem;
+    text-align: center;
+    font-family: Poppins, Open Sans, sans-serif;
+    margin-bottom: 7rem;
+}
+
+.sponmain:before {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    width: 130px;
+    height: 3px;
+    background: #f7941d;
+}
+
+.sponsors {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 1rem 7rem 0rem 7rem;
+}
+
+.spcard {
+    display: block;
+    text-align: center;
+}
+
+.spcard img {
+    width: 300px;
+}
+
+.proposal {
+    display: flex;
+    justify-content: center;
+    margin: 0 9rem 10rem 9rem;
+}
+
+.txt {
+    text-align: center;
+    font-size: 1.75rem;
+    color: white;
+    font-weight: 500;
+    font-family: Poppins, Open Sans, sans-serif;
+    margin-top: 2rem;
+}
+
+.plugin {
+    width: 700px;
+    height: 855px;
+    margin: auto;
+}
+
+/* Responsive Styles for Sponsors Section */
+@media (max-width: 1024px) {
+    .sponsors {
+        flex-direction: column;
+        gap: 3rem;
+        margin: 1rem 2rem;
+    }
+    
+    .spcard img {
+        width: 250px;
+    }
+    
+    .proposal {
+        margin: 0 2rem 5rem 2rem;
+    }
+    
+    .plugin {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .sponmain {
+        font-size: 3rem;
+        margin-top: 8rem;
+        margin-bottom: 4rem;
+    }
+    
+    .txt {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 555px) {
+    .sponmain {
+        font-size: 2.5rem;
+        margin-top: 6rem;
+    }
+    
+    .spcard img {
+        width: 200px;
+    }
+    
+    .txt {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 425px) {
+    .sponmain {
+        font-size: 2rem;
+        padding: 0 1rem;
+    }
+    
+    .sponmain:before {
+        width: 100px;
+    }
+    
+    .spcard img {
+        width: 180px;
+    }
+    
+    .proposal {
+        margin: 0 1rem 3rem 1rem;
+    }
+}
