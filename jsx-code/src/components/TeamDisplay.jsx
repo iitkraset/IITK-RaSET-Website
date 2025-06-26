@@ -2,6 +2,9 @@ import React, { useState, useEffect } from 'react';
 import Papa from 'papaparse';
 // import ScrollReveal from 'scrollreveal';
 import TeamMemberJTM, { TeamMember } from './Teams_template';
+import akushariImg from '../assets/akushari.jpg';
+import RkiteyImg from '../assets/Rkitey.jpg';
+import tsukoriyaImg from '../assets/tsukoriya.avif';
 
 async function fetchAndParseCsv(csvPath) {
   try {
@@ -118,24 +121,23 @@ const facultyData = [
     name: "Dr. Abhijit Kushari",
     department: "Aerospace Engineering",
     institution: "IIT Kanpur",
-    image: "src/assets/akushari.jpg",
+    image: akushariImg,
     website: "https://home.iitk.ac.in/~akushari/"
   },
-  // ... other faculty members
- {
+  {
     name: "Dr. Rajesh Kitey",
     department: "Aerospace Engineering",
     institution: "IIT Kanpur",
-    image: "src/assets/Rkitey.jpg",
+    image: RkiteyImg,
     website: "https://home.iitk.ac.in/~kitey/"
   },
   {
     name: "Dr. Tushar Sikroria",
     department: "Mechanical Engineering",
     institution: "IIT Kanpur",
-    image: "src/assets/tsukoriya.avif",
+    image: tsukoriyaImg,
     website: "https://tsikroria0.wixsite.com/trisep"
-  }, 
+  },
 ];
 
   return (
