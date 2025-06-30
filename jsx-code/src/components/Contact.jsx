@@ -4,7 +4,7 @@ import Footer from './Footer'; // Adjust path as needed
 import { FaFireFlameCurved, FaPlaneDeparture, FaMicrochip, FaParachuteBox, FaLocationDot, FaEnvelope } from 'react-icons/fa6';
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube, FaDiscord } from 'react-icons/fa';
 import './Contact.css'
-// import ScrollReveal from 'scrollreveal';
+import ScrollReveal from 'scrollreveal';
 
 const ContactPage = () => {
   useEffect(() => {

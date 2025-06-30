@@ -10,7 +10,7 @@ import './Homepage.css'
 import './Footer.css'
 import Navbar from './Navbar';
 import Footer from './Footer';
-// import ScrollReveal from 'scrollreveal';
+import ScrollReveal from 'scrollreveal';
 
 const HomePage = () => {
   // ref for the canvas
