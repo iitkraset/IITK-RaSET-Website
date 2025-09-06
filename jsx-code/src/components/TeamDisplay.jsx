@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Papa from 'papaparse';
 // import ScrollReveal from 'scrollreveal';
-import TeamMemberJTM, { TeamMember } from './Teams_template';
+import TeamMemberJTM, { TeamMember, TeamMemberHistory } from './Teams_template';
 import akushariImg from '../assets/akushari.jpg';
 import RkiteyImg from '../assets/Rkitey.jpg';
 import tsukoriyaImg from '../assets/tsukoriya.avif';
@@ -30,10 +30,12 @@ function TeamDisplay() {
   const [jtMembers, setJtMembers] = useState([]);
   const [stMembers, setStMembers] = useState([]);
   const [Heads, setHeads] = useState([]);
+  const [y22Heads, setY22Heads] = useState([]);
+  const [y22STMs, setY22STMs] = useState([]);
   // const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    async function loadTeamData() {
+  async function loadTeamData() {
       // Load JT Members
       const jtData = await fetchAndParseCsv('/JTM Info.csv'); // The JTM Info.csv file path is in the public directory
       const grouped = {};
@@ -56,9 +58,14 @@ function TeamDisplay() {
       // setStMembers(grouped2);
       setStMembers(stData);
 
-      const headsData = await fetchAndParseCsv('/Heads Info.csv')
-      console.log("Heads Data:", headsData);
-      setHeads(headsData);
+  const headsData = await fetchAndParseCsv('/Heads Info.csv')
+  setHeads(headsData);
+
+  // Load Y22 Heads and STMs for history
+  const y22HeadsData = await fetchAndParseCsv('/Heads_Y22_Info.csv');
+  setY22Heads(y22HeadsData);
+  const y22STMsData = await fetchAndParseCsv('/STMs_Y22_Info.csv');
+  setY22STMs(y22STMsData);
     }
     
     loadTeamData();
@@ -176,6 +183,7 @@ const facultyData = [
       </div>
       
 
+
       {/* JT Members Section */}
       <h1 className = "team-heading">JUNIOR TEAM MEMBERS</h1>
       {Object.keys(jtMembers).map((subsystem) => (
@@ -189,8 +197,48 @@ const facultyData = [
         </div>
       ))}
 
-      
+      {/* HISTORY SECTION */}
+      <section className="history-section" style={{marginTop: '60px', marginBottom: '40px', padding: '0'}}>
+  <h1 className="team-heading" style={{color:'#fff', fontSize:'3.2rem', marginBottom:'28px', letterSpacing:'2px'}}>HISTORY</h1>
+  <h2 className="subsystem-heading" style={{color:'#fff', fontWeight:800, fontSize:'2.4rem', marginBottom:'18px'}}>Y22</h2>
+  <h3 className="subsystem-heading" style={{color:'#fff', fontWeight:800, fontSize:'1.85rem', margin:'32px 0 16px'}}>HEADS</h3>
+        <div className="team-grid">
+          {y22Heads.length === 0 ? <div style={{color:'#222'}}>No Heads data available.</div> : y22Heads.map((member, idx) => (
+            <TeamMemberHistory key={`y22head-${idx}`} member={member} />
+          ))}
+        </div>
+  <h3 className="subsystem-heading" style={{color:'#fff', fontWeight:800, fontSize:'1.85rem', margin:'38px 0 16px'}}>STMs</h3>
+        <div className="team-grid">
+          {y22STMs.length === 0 ? <div style={{color:'#222'}}>No STMs data available.</div> : y22STMs.map((member, idx) => (
+            <TeamMemberHistory key={`y22stm-${idx}`} member={member} />
+          ))}
+        </div>
+      </section>
+
     </div>
+
+    {/* HISTORY section above the footer, similar to team.html */}
+    <section className="history-footer-section" style={{margin: '50px 0 15px', textAlign: 'center'}}>
+      <h1 className="almline" style={{ fontSize: '2.2rem', marginBottom: '18px', color: '#f7941d', letterSpacing: '1px' }}>About IITK RaSET</h1>
+      <div className="almline2" style={{
+        maxWidth: '700px',
+        margin: '0 auto',
+        fontSize: '1.15rem',
+        lineHeight: 1.7,
+        color: '#fff',
+        background: 'rgba(20,20,20,0.98)',
+        borderRadius: '12px',
+        padding: '22px 28px',
+        boxShadow: '0 2px 16px 0 rgba(0,0,0,0.18)'
+      }}>
+        <p style={{marginBottom: '12px'}}>
+          <b>IITK RaSET</b> was initially established in <b>2022</b> as a Science and Technology Council project by Atharva Dehadraya, along with his junior team members Nandan and Shraman. Over time, Nandan and Shraman assumed leadership of the council project.
+        </p>
+        <p style={{marginBottom: '0'}}>
+          In <b>2024</b>, the initiative was officially transformed into a recognized Science and Technology Council team at IIT Kanpur. The first leadership team of RaSET comprised <b>Prabhu Safi</b>, <b>Aniket Nandi</b>, <b>Rangan Pal</b>, and <b>Riya Gupta</b>.
+        </p>
+      </div>
+    </section>
     </>
   );
 }
