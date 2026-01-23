@@ -24,7 +24,7 @@ const Projects = () => {
               <a>Project June<i className="fa-solid fa-up-right-from-square fa-2xs" style={{marginLeft: '2rem'}}></i></a>
             </h1>
             <p style={{color: 'white', fontSize: '16px', fontWeight: 365}}>
-              <span className="specify">Project Lead : Prabhu Safi</span> <br />
+              <span className="specify">Made in collaboration with Indian Rocketry Association (IRA) </span> <br />
               <span className="specify">Motor Class : K95% </span><br />
               <span className="specify">Total Impulse : 2500 N·s</span> <br />
               <span className="specify">Maximum Thrust : 2700 N</span> <br />
@@ -36,7 +36,7 @@ const Projects = () => {
           </div>
         </div>
 
-        <div className="wrapper">
+        {/* <div className="wrapper">
           <div className="profile">
             <img src="images/projects/Sagra.jpeg" alt="proj2" />
           </div>
@@ -57,7 +57,7 @@ const Projects = () => {
               This initiative represents a pioneering effort in advancing liquid propulsion technology at the student level, a field known for its precision, efficiency, and potential for reusability. 
             </p>
           </div>
-        </div>
+        </div> */}
 
         <div className="wrapper">
           <div className="profile">
@@ -68,14 +68,14 @@ const Projects = () => {
               <a>Project Prometheus<i className="fa-solid fa-up-right-from-square fa-2xs" style={{marginLeft: '2rem'}}></i></a>
             </h1>
             <p style={{color: 'white', fontSize: '16px', fontWeight: 365}}>
-              <span className="specify">Project Lead : Prabhu Safi</span> <br />
               <span className="specify">Rocket : Prometheus</span><br />
               <span className="specify">Dimensions : Length - 130 cm; Diameter - 72 mm</span> <br />
               <span className="specify">Propulsion : K-Class Solid Rocket Motor (95% K-class) </span> <br />
               <span className="specify">Maximum Altitude reach : 4 km</span> <br />
               <span className="specify">Maximum Velocity : 1.5 Mach</span> <br />
-              <span className="specify">Status : Ongoing</span> <br />
-              Prometheus is a supersonic, high-power rocket entirely designed and built by students of IIT Kanpur in collaboration with Indian Rocketry association.
+              <span className="specify">Status : Completed</span> <br />
+              <span className="specify">Made in collaboration with Indian Rocketry Association (IRA) </span> <br />
+              Prometheus is a supersonic, high-power rocket entirely designed and built by students of IIT Kanpur in collaboration with Indian Rocketry Association.
               This groundbreaking project aims to reach an altitude of 4 kilometers, demonstrating advanced system integration, avionics, and recovery mechanisms. 
               It's also first supersonic, high-power rocket entirely designed and built by students in India.
             </p>
