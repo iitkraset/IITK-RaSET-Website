@@ -92,13 +92,13 @@ const Projects = () => {
             </h1>
             <p style={{color: 'white', fontSize: '16px', fontWeight: 365}}>
               <span className="specify">Rocket : Thunderstruck</span><br />
-              <span className="specify">Dimensions : Length - 160 cm; Diameter - 118 mm</span> <br />
+              <span className="specify">Dimensions : Length - 190 cm; Diameter - 118 mm</span> <br />
               <span className="specify">Propulsion : Commercial-Off-The-Shelf TIVRA K95 by ThrustTech India</span> <br />
               <span className="specify">Designed apogee : 1 km</span> <br />
               <span className="specify">Status : Unable to launch due to weather conditions</span> <br />
               We cleared the Preliminary and Comprehensive Design Reviews of IN-SPACe Model Rocketry Competition, and qualified for the final stage at Kushinagar, UP.
-              At the launch site, we faced an issue with telemetry in our LoRa 433 MHz (Payload) & Xbee S2C Pro (Rocket). After several resoldering and debugging, we were able to successfully achieve communication with one of them.
-              We demonstrated our rocket and avionics setup successfully to the Jury, however, due to rain reducing the number of launch slots drastically, we were unable to launch.
+              At the launch site, we faced an issue with telemetry in our LoRa 433 MHz (Payload) & Xbee S2C Pro (Rocket) setup. After several resoldering and debugging, we were able to successfully achieve communication with one of them.
+              We demonstrated our rocket and avionics setup successfully to the Jury. However, due to rain reducing the number of launch slots drastically, we were unable to launch.
             </p>          </div>
         </div>
 
