@@ -41,7 +41,7 @@ const ContactPage = () => {
           </div>
         </div>
 
-        <h1 className="sponmain" style={{ marginBottom: '3rem', marginTop: '8rem' }}>Our Marketing Proposal</h1>
+        {/* <h1 className="sponmain" style={{ marginBottom: '3rem', marginTop: '8rem' }}>Our Marketing Proposal</h1>
         <div className="proposal">
           <iframe 
             src="/images/Sponsors/Marketing Proposal IITK RaSET.pdf" 
@@ -52,7 +52,7 @@ const ContactPage = () => {
             This browser does not support PDFs. Please download the PDF to view it: 
             <a href="/images/Sponsors/Marketing Proposal IITK RaSET.pdf">Download PDF</a>
           </iframe>
-        </div>
+        </div> */}
       </section>
 
       <section className="ContactUS">
