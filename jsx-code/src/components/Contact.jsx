@@ -20,59 +20,44 @@ const ContactPage = () => {
     <div className="contact-page">
       <Navbar activeLink="contact" />
       
-      <section className="ContactUS">
-        <div className="Cbox2">
-          <div className="contactS y24rect">
-  <h3 id="rectres">Y24 RECRUITMENT RESULTS</h3>
-  <div className="infoBox">
-    <ul className="infou">
-      {/* Propulsion */}
-      <li>
-        <span><FaFireFlameCurved style={{ color: '#f7941d' }} id="sublogo1" /></span>
-        <span id="rispace1">Propulsion</span>
-        <div className="name-roll-container">
-          <div className="name">Ayush Dwivedi<br />Saket Pratap<br />Arunteja<br />Shivam Sah<br />Rucha Pimpalkar<br />Priyam<br />Preet Varu<br />Ravi Patar</div>
-          <div className="roll">240238<br />240909<br />240199<br />240979<br />240887<br />240801<br />241144<br />240856</div>
+      <section className="sponsors-section" style={{ paddingTop: '120px', paddingBottom: '60px' }}>
+        <h1 className="sponmain">Our Sponsors</h1>
+        <div className="sponsors">
+          <div className="spcard">
+            <a href="https://www.ansys.com/en-in" target="_blank" rel="noopener noreferrer">
+              <img src="/images/Sponsors/Ansys.png" alt="Ansys" />
+            </a>
+          </div>
+          <div className="spcard">
+            <a href="https://www.iitk.ac.in/aero/?view=featured" target="_blank" rel="noopener noreferrer">
+              <img src="/images/Sponsors/IITK.png" alt="IITK AE" />
+              <h3 className="txt">Department of Aerospace Engineering <br />IIT Kanpur</h3>
+            </a>
+          </div>
+          <div className="spcard">
+            <a href="https://www.altium.com/" target="_blank" rel="noopener noreferrer">
+              <img src="/images/Sponsors/Altium.png" alt="Altium" />
+            </a>
+          </div>
         </div>
-      </li>
-      
-      {/* Aerodynamics & Structures */}
-      <li>
-        <span><FaPlaneDeparture style={{ color: '#f7941d' }} id="sublogo2" /></span>
-        <span id="rispace2">Aerodynamics & Structures</span>
-        <div className="name-roll-container">
-          <div className="name">Shlok Sharma<br />Anurag Patil<br />Ashwin Kumar singh<br />Hetal Sharad Patil<br />Mehta Aarav<br />Ritika Batra<br />Anshu Sharma<br />Abhijit Sandip Jagtap<br />Ria Agrawal<br />Arman Kumar Singh<br />Gunjan Soni<br />Rachna Sinha<br />Shubhanshu Sharma</div>
-          <div className="roll">240988<br />240156<br />240219<br />240449<br />240649<br />240876<br />240147<br />240028<br />240861<br />240183<br />240418<br />240824<br />241010065</div>
-        </div>
-      </li>
-      
-      {/* Avionics, Payload & Control */}
-      <li>
-        <span><FaMicrochip style={{ color: '#f7941d' }} id="sublogo3" /></span>
-        <span id="rispace3">Avionics, Payload & Control</span>
-        <div className="name-roll-container">
-          <div className="name">Bhavishya Lalwani<br />SR Ramya Rasika<br />Shourya Mathur<br />Ashwin Varma<br />H.Nideesh<br />Praket Goel<br />S Kiran<br />Aashutosh Kushwaha<br />Aradhya Goel<br />Chirag Gupta<br />Karan Kunal<br />Arnav Agarwal</div>
-          <div className="roll">240270<br />240849<br />240991<br />240220<br />240690<br />240762<br />240895<br />240022<br />240168<br />240311<br />240520<br />240187</div>
-        </div>
-      </li>
-      
-      {/* Recovery */}
-      <li>
-        <span><FaParachuteBox style={{ color: '#f7941d' }} id="sublogo4" /></span>
-        <span id="rispace4">Recovery</span>
-        <div className="name-roll-container">
-          <div className="name">Parth Wadhawe<br />Ronit Roy<br />Pradeep Bishnoi<br />Anshit Goyal<br />Aarichsun Batlish<br />Bhargavi Arun Borse<br />Aditya Kukreti</div>
-          <div className="roll">240737<br />240884<br />240756<br />240146<br />240014<br />240284<br />240058</div>
-        </div>
-      </li>
-    </ul>
-  </div>
-  <h3 id="cong">Congratulations to all the new members of the team.</h3>
-  <h3 id="linn">Let's launch this tenure with full thrust <span id="smiley">:)</span></h3>
-</div> </div>
 
+        <h1 className="sponmain" style={{ marginBottom: '3rem', marginTop: '8rem' }}>Our Marketing Proposal</h1>
+        <div className="proposal">
+          <iframe 
+            src="/images/Sponsors/Marketing Proposal IITK RaSET.pdf" 
+            className="plugin"
+            title="Marketing Proposal"
+            style={{ width: '100%', height: '600px', border: 'none' }}
+          >
+            This browser does not support PDFs. Please download the PDF to view it: 
+            <a href="/images/Sponsors/Marketing Proposal IITK RaSET.pdf">Download PDF</a>
+          </iframe>
+        </div>
+      </section>
+
+      <section className="ContactUS">
         <div className="Cbox">
-          <div className="contactS form">
+          {/* <div className="contactS form">
             <h3>Send us a Message . . .</h3>
             <form>
               <div className="formBox">
@@ -105,7 +90,7 @@ const ContactPage = () => {
                 </div>
               </div>
             </form>
-          </div>
+          </div> */}
 
           <div className="contactS infu">
             <h3>Contact Info</h3>

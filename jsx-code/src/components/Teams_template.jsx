@@ -164,7 +164,7 @@ function TeamMember({ member }) { //This function is for STMs and Heads
 }
 
 // Component for displaying historical team members (Heads or STMs)
-function TeamMemberHistory({ member }) {
+function TeamMemberHistory({ member, role }) {
   // Use the same logic as TeamMember for image, but fallback to a default if not found
   const username = member?.email?.split('@')[0] ?? '';
   console.log(username)
@@ -178,7 +178,7 @@ function TeamMemberHistory({ member }) {
       </div>
       <div className="member-info-visible">
         <h3 className="member-name">{member.Name}</h3>
-        <p className="member-subsystem">{member.subsystem}</p>
+        <p className="member-subsystem">{role}</p>
       </div>
       <div className="member-overlay-social">
         <div className="member-info">

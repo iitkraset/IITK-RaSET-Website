@@ -44,6 +44,8 @@ import Sponsorships from './components/Sponsors';
 import Projects from './components/Projects';
 import Homepage from './components/Homepage';
 import ContactPage from './components/Contact';
+import CurrentTeam from './components/CurrentTeam';
+import Alumni from './components/Alumni';
 import ScrollToTop from './components/ScrollToTop';
 
 const Team = () => {
@@ -86,13 +88,17 @@ const App = () => {
   return (
     <BrowserRouter basename="">
       <ScrollToTop />
+      <Navbar />
       <Routes>
-      <Route path="/" element={<Homeset />} />
-       <Route path="/sponsors" element={<Sponsorships />} />
-       <Route path="/projects" element={<Projects />} />
-       <Route path="/team" element={<Team />} />
-       <Route path="/contact" element={<ContactPage />} />
+        <Route path="/" element={<Homeset />} />
+        <Route path="/sponsors" element={<Sponsorships />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/team" element={<Team />} />
+        <Route path="/team/current" element={<CurrentTeam />} />
+        <Route path="/team/alumni" element={<Alumni />} />
+        <Route path="/contact" element={<ContactPage />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 };

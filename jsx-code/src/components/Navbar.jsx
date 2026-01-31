@@ -33,13 +33,27 @@ const Navbar = () => {
           <li>
             <NavLink to="/projects" className={({ isActive }) => `nav-link${isActive ? ' active' : ''}`}>Projects</NavLink>
           </li>
-          <li>
+          {/* <li>
             <NavLink to="/sponsors" className={({ isActive }) => `nav-link${isActive ? ' active' : ''}`}>Sponsorships</NavLink>
-          </li>
-          <li>
+          </li> */}
+          <li className="dropdown">
             <NavLink to="/team" className={({ isActive }) => `nav-link${isActive ? ' active' : ''}`}>Team</NavLink>
+            <ul className="dropdown-menu">
+              <li><NavLink to="/team/current">Current Team</NavLink></li>
+              <li><NavLink to="/team/alumni">Alumni</NavLink></li>
+            </ul>
+          </li>
+          <li className="dropdown">
+            <span className="nav-link">Subsystem</span>
+            <ul className="dropdown-menu">
+              <li><a href="https://drive.google.com/file/d/1IFZKqOCarH6pvy-6I6CcIEONcF9FSToy/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">Propulsion</a></li>
+              <li><a href="https://drive.google.com/file/d/1S0mTjwDa7oSt_cBynET0sFR62Tz5FIKu/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">Aerodynamics & Structures</a></li>
+              <li><a href="https://drive.google.com/file/d/1nPs4nQZAK0p1hDS4q2Fv8dv6ysnZFz1c/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">Avionics & Payload</a></li>
+              <li><a href="https://drive.google.com/file/d/1cRV9z-osZqELUE4k4jkiz2k2u9rnFQE_/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">Recovery</a></li>
+            </ul>
           </li>
           <li>
+            {/*TODO: Add sponsors to contact page */}
             <NavLink to="/contact" className={({ isActive }) => `nav-link${isActive ? ' active' : ''}`}>Contact us</NavLink>
           </li>
         </ul>

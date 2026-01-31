@@ -180,7 +180,7 @@ const HomePage = () => {
         <div className="container">
           <h1 className="subsystem-heading" style={{fontWeight: 570}}>OUR SUBSYSTEMS</h1>
           <div className="card-container">
-            <div className="card" id="item1">
+            <div className="card" id="propulsion">
               <FontAwesomeIcon icon={faFireFlameCurved} size="2xl" style={{color: "#ffffff"}} />
               <h3 style={{color: "white", fontSize: "18px", fontWeight: 650, marginBottom: "21px"}}>PROPULSION</h3>
               <p style={{color: "white", textAlign: "left", fontSize: "17px", lineHeight: "1.4"}}>
@@ -191,7 +191,7 @@ const HomePage = () => {
               <a href="https://drive.google.com/file/d/1IFZKqOCarH6pvy-6I6CcIEONcF9FSToy/view?usp=drivesdk" className="card-button">Learn more</a>
             </div>
             
-            <div className="card" id="item2">
+            <div className="card" id="aero-struct">
               <FontAwesomeIcon icon={faPlaneDeparture} size="2xl" style={{color: "#ffffff"}} />
               <h3 style={{color: "white", fontSize: "18px", fontWeight: 650}}>AERODYNAMICS & STRUCTURES</h3>
               <p style={{color: "white", textAlign: "left", fontSize: "17px", lineHeight: "1.4"}}>
@@ -202,7 +202,7 @@ const HomePage = () => {
               <a href="https://drive.google.com/file/d/1S0mTjwDa7oSt_cBynET0sFR62Tz5FIKu/view?usp=drivesdk" className="card-button">Learn more</a>
             </div>
             
-            <div className="card" id="item3">
+            <div className="card" id="avionics-payload">
               <FontAwesomeIcon icon={faMicrochip} size="2xl" style={{color: "#ffffff"}} />
               <h3 style={{color: "white", fontSize: "18px", fontWeight: 650}}>AVIONICS & <br/>PAYLOAD</h3>
               <p style={{color: "white", textAlign: "left", fontSize: "17px", lineHeight: "1.4"}}>
@@ -213,7 +213,7 @@ const HomePage = () => {
               <a href="https://drive.google.com/file/d/1nPs4nQZAK0p1hDS4q2Fv8dv6ysnZFz1c/view?usp=drivesdk" className="card-button">Learn more</a>
             </div>
             
-            <div className="card" id="item4">
+            <div className="card" id="recovery">
               <FontAwesomeIcon icon={faParachuteBox} size="2xl" style={{color: "#ffffff"}} />
               <h3 style={{color: "white", fontSize: "18px", fontWeight: 650, marginBottom: "21px"}}>RECOVERY</h3>
               <p style={{color: "white", textAlign: "left", fontSize: "17px", lineHeight: "1.4"}}>
