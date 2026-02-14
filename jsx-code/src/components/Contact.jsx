@@ -37,7 +37,7 @@ const ContactPage = () => {
           <div className="spcard">
             <a href="https://www.altium.com/" target="_blank" rel="noopener noreferrer">
               <img src="/images/Sponsors/altium_logo_blk.png" alt="Altium" />
-              <p className="txt">Copyright owned by Altium LLC, used with permission <br /></p>
+              <span>Copyright owned by Altium LLC, used with permission</span>
             </a>
           </div>
         </div>
