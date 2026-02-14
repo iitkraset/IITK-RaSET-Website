@@ -37,7 +37,7 @@ const Navbar = () => {
             <NavLink to="/sponsors" className={({ isActive }) => `nav-link${isActive ? ' active' : ''}`}>Sponsorships</NavLink>
           </li> */}
           <li className="dropdown">
-            <NavLink to="/team" className={({ isActive }) => `nav-link${isActive ? ' active' : ''}`}>Team</NavLink>
+            <NavLink to="/team/current" className={({ isActive }) => `nav-link${isActive ? ' active' : ''}`}>Team</NavLink>
             <ul className="dropdown-menu">
               <li><NavLink to="/team/current">Current Team</NavLink></li>
               <li><NavLink to="/team/alumni">Alumni</NavLink></li>
