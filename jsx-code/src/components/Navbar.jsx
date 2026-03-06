@@ -46,10 +46,10 @@ const Navbar = () => {
           <li className="dropdown">
             <span className="nav-link">Subsystem</span>
             <ul className="dropdown-menu">
-              <li><a href="https://drive.google.com/file/d/1IFZKqOCarH6pvy-6I6CcIEONcF9FSToy/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">Propulsion</a></li>
-              <li><a href="https://drive.google.com/file/d/1S0mTjwDa7oSt_cBynET0sFR62Tz5FIKu/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">Aerodynamics & Structures</a></li>
-              <li><a href="https://drive.google.com/file/d/1nPs4nQZAK0p1hDS4q2Fv8dv6ysnZFz1c/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">Avionics & Payload</a></li>
-              <li><a href="https://drive.google.com/file/d/1cRV9z-osZqELUE4k4jkiz2k2u9rnFQE_/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">Recovery</a></li>
+              <li><a href="/Propulsion%20Y25.pdf" target="_blank" rel="noopener noreferrer">Propulsion</a></li>
+              <li><a href="/Aerodynammics%20and%20Structures%20Y25.pdf" target="_blank" rel="noopener noreferrer">Aerodynamics & Structures</a></li>
+              <li><a href="/Avionics%2C%20Payload%20and%20Control%20_Y25.pdf" target="_blank" rel="noopener noreferrer">Avionics & Payload</a></li>
+              <li><a href="/Recovery_Y25.pdf" target="_blank" rel="noopener noreferrer">Recovery</a></li>
             </ul>
           </li>
           <li>
