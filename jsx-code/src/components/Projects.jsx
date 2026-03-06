@@ -31,7 +31,7 @@ const Projects = () => {
               <span className="specify">Project Lead: Prabhu Safi </span> <br />
               With a peak thrust of 2700 N and a total impulse of 2500 N·s, it stands as one of the most 
               powerful rocket motors built and successfully tested by a student team in India.
-              Achieving this feat required advanced propellant optimization, precision manufacturing, and innovative design.
+              Achieving this feat required advanced propellant optimization, precision manufacturing, and innovation.
             </p>
           </div>
         </div>
