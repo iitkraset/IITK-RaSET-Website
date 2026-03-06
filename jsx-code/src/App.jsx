@@ -59,7 +59,6 @@ const Team = () => {
     <div className='page-wrapper'> <Navbar />
     
     <TeamDisplay/>
-    <Footer />
     </div>
     
   );
@@ -76,7 +75,6 @@ const Homeset = () => {
     <div className='page-wrapper'> <Navbar />
     
     <Homepage/>
-    <Footer />
     </div>
     
   );
